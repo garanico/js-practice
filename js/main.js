@@ -13,6 +13,8 @@ myButton.innerHTML = 'Different' //this applies html properities
 
 /* addEventListener - looks for the action, 'mouseout' is the action, function says if you do the action (mouseout), then alert fires*/
 
-myButton.addEventListener ('mouseout', fuction(){
-    alert('hello')
-})
+myButton.addEventListener ('mouseout', fuction(){alert('hello')}
+
+
+console.log("Grace Aranico")
+console.log("noodles")
