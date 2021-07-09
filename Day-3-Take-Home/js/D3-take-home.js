@@ -5,15 +5,21 @@ document.body.appendChild(h1);
 h1.innerHTML = 'Day 3 Take Home Challenge';
 
 //Names
-let firstName = prompt('What is your first name?');
-let lastName = prompt('What is your last name?');
+const firstName = prompt('What is your first name?');
+const lastName = prompt('What is your last name?');
 console.log('firstName, lastName');
 alert(lastName);
 
 
 //Bonus - Birthday
-let birthday = prompt('What\'s your birthday?');
-confirm(`Is ${birthday} your birthday?`);
-alert('When\'s the party?');
+const birthday = prompt('When\'s your birthday?');
+const correctBirthday = confirm(`Is ${birthday} your birthday?`);
+
+if (correctBirthday){
+    alert('Where\'s the party?')
+} else {
+    alert('incorrect birthday')
+}
+
 
 
