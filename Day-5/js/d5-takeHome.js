@@ -7,35 +7,27 @@
 
 
 
-let password = prompt("Please enter a password that is 6-20 charaters long.  Password must start with a letter."); //ask the user to input a password with required parameters.
+function askForValidPassword(){
+    let password = prompt("Please enter a password that is 6-20 charaters long.  Password must start with a letter."); //ask the user to enter a password with required parameters.
+    
+    let firstCharacter = (password.charAt(0));//charAt(0) identifies the first character in the variable.
 
-console.log(typeof (password)); //checks the data type of the input
+    const isValidCharacter = /[a-z, A-Z]/.test(firstCharacter);//checks if first character is a letter.
+    const isValidLength = password.length >= 6 && password.length <= 20;//checks if input is between 6-20 characters.
 
-let firstCharacter = console.log(password.charAt(0)); //logs + charAt(0) identifies the first character in the variable
+    if (!isValidCharacter){
+        alert("Password must start with a letter.");//if first character is not a letter, alert user what is wrong.
+    }
+    if(!isValidLength){
+        alert("Password is not the right length.");//if password is not the right length, alert user what is wrong.
+    }
 
-console.log(password.length);
-//console.log(password.length); //logs + .length checks the number of charcters in the variable
-
-//Validates first character is a letter
-
-if (firstCharacter == [/a-z, A-Z/]) {
-    console.log(firstCharacter);
-} else (firstCharacter !== [/a-z, A-Z/]); {
-    prompt("Password must start with a letter")
+    if ((isValidCharacter && isValidLength)){
+        alert ("Your password has been accepted!");//both conditions must be true.
+    } else {
+        askForValidPassword();//if one of the conditions is not true, it will alert user what is wrong (Line 19 or Line 22), then function starts all over again.
+    }
+    
 };
 
-
-
-//Validates Password Minimum and Maximum Length
-
-if (password.length <= 6 || password.length >= 20) {
-    console.log(password.length);
-} else (password.length < 6 || password.length > 20); {
-    prompt("Password is the incorrect number of characters.")
-};
-
-
-if ((firstCharacter && password.length)){
-    alert ("Your password has been accepted!");
-}
-else (prompt ("Your password is incorrect" ));
+askForValidPassword();//call the function.
