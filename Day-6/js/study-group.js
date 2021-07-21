@@ -3,7 +3,7 @@ const url = async(pokename)=>{
     const apiUrl = "https://pokeapi.co/api/v2/";
     // this is the end point
     const endPoint = `pokemon/${pokename}`; 
-    //this ask to find the data
+    //this asks to find the data
     const pokeData = await fetch(apiUrl + endPoint)
     //if you find the API...
     .then(res => {
