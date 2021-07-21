@@ -1,18 +1,18 @@
 //Day 7 Class Project - Instructor's code
 
 
-const BASE_URL = 'http://fea2d139a33e.ngrok.io';
-const FACTS_ENDPOINT = '/facts';
+const BASE_URL = 'http://fea2d139a33e.ngrok.io';//defines API base url
+const FACTS_ENDPOINT = '/facts';//Lines 5-8 define endpoints.
 const USERS_ENDPOINT = '/users';
 const REGISTER_ENDPOINT = '/register';
 const LOGIN_ENDPOINT = '/login';
 
-const username = document.querySelector('#username');
-const registerButton = document.querySelector('#register');
-const loginButton = document.querySelector('#login');
+const username = document.querySelector('#username'); //user input for username field in DOM
+const registerButton = document.querySelector('#register'); //user input for register field in DOM
+const loginButton = document.querySelector('#login'); //user input for login field in DOM
 
-registerButton.addEventListener( 'click', register);
-loginButton.addEventListener('click', login);
+registerButton.addEventListener( 'click', register);//waiting for user to click on register button
+loginButton.addEventListener('click', login);//waiting for user to click on login button
 
 
 
