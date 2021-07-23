@@ -18,5 +18,6 @@ class Car{
     }
 }
 
-let carList = new Car [("Subaru", "Ascent", 2021, "white", "SUV"), new Car ("Toyota", "Tacoma", 2008, "black" "truck"), new Car ("Little Tikes", "Patrol Police Car", 2018, "black" "coupe"), new Car ("Chevrolet", "Camaro", 1999, "silver", "coupe")];
+let carList = [new Car("Subaru", "Ascent", 2021, "white", "SUV"), new Car("Toyota", "Tacoma", 2008, "black", "truck"), new Car("Little Tikes", "Patrol Police Car", 2018, "black", "coupe"), new Car("Chevrolet", "Camaro", 1999, "silver", "coupe")];
+
 console.log(carList);
