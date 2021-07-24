@@ -10,20 +10,35 @@
 // Add another method to teach your dog one more trick
 // BONUS: Display your dog object values in HTML
 
+function speakTrick() {
+    let btn = document.createElement("button");//created a button 
+    btn.innerHTML = "Speak!";//added text in the button
+    document.body.appendChild(btn);//places the button to DOM
+    btn.addEventListener("click", function(){
+       alert("woof!");//calls function on the click
+   })
+ };
 
+ function ballTrick() {
+     let btn = document.createElement("button");
+       btn.innerHTML = "Get the Ball!";
+       document.body.appendChild(btn);
+       btn.addEventListener("click", function(){
+           alert("Get the Ball!");
+     })
+ };
 
 const dog = {
     name: "Molly", //property
     breedType: "Mini Poodle/St. Bernard",//another property
     age: 13,//another property
-    speak: function(){
-        alert("woof!");//function assigned to a property
-    },
-    getBall: function(){
-        prompt("Get the ball!");
-    }
-
-}
-
+    };  
 
 console.log(dog);
+document.getElementById("dog").addEventListener("click", function (){
+    document.getElementById("breedType").innerText=dog.breedType;
+    document.getElementById("age").innerText=dog.age;
+    document.getElementById("name").innerText=dog.name;
+    let speakButton = speakTrick();//makes the button show
+    let ballButton = ballTrick();
+});
