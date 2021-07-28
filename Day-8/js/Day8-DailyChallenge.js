@@ -14,24 +14,27 @@ function speakTrick() {
     let btn = document.createElement("button");//created a button 
     btn.innerHTML = "Speak!";//added text in the button
     document.body.appendChild(btn);//places the button to DOM
-    btn.addEventListener("click", function(){
-       alert("woof!");//calls function on the click
-   })
+    btn.addEventListener("click", dog.speakTrick);//calls function on the click
+   
  };
 
  function ballTrick() {
      let btn = document.createElement("button");
        btn.innerHTML = "Get the Ball!";
        document.body.appendChild(btn);
-       btn.addEventListener("click", function(){
-           alert("Get the Ball!");
-     })
+       btn.addEventListener("click", dog.getBall)
  };
 
 const dog = {
     name: "Molly", //property
     breedType: "Mini Poodle/St. Bernard",//another property
     age: 13,//another property
+    speakTrick(){
+        alert("Woof!");
+    },
+    getBall(){
+        alert("Get the Ball!");
+  }
     };  
 
 console.log(dog);
